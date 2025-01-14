@@ -1,4 +1,3 @@
-
 @extends('game.index')
 @section('judul')
 <title>{{$judul}} | Express Topup</title>

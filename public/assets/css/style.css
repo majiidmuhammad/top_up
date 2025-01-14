@@ -17,6 +17,14 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
+    gap: 2rem;
+}
+
+.button-login{
+    text-decoration:none;
+    color: white;
+    background-color: blue;
+    padding: 5px;
 }
 
 .menu-icon, .mail-icon {

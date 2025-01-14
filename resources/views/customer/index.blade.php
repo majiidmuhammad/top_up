@@ -17,6 +17,7 @@
             <div class="menu-icon">☰</div>
             <input type="text" class="search-bar" placeholder="Search...">
             <div class="mail-icon">✉</div>
+            <div><a class="button-login" href="/login">Login</a></div>
         </div>
     </header>
     <main>

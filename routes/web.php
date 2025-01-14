@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\ProductController;
@@ -8,7 +9,7 @@ use App\Http\Controllers\PembelianController;
 
 Route::get('/', function () {
     // return view('welcome');
-    return redirect()->route('login');
+    return view('customer.index');
 });
 
 Route::get('login', [LoginController::class, 'loginBackend'])->name('login');
@@ -24,3 +25,8 @@ Route::put('product/update/{id}', [ProductController::class, 'update'])->name('p
 Route::delete('product/{id}', [ProductController::class, 'destroy'])->name('product.destroy')->middleware('auth');
 
 Route::get('pembelian', [PembelianController::class, 'index'])->name('pembelian')->middleware('auth');
+
+//per game
+Route::get('valorant', [GameController::class, 'valorant'])->name('valorant');
+Route::post('buy-valorant', [GameController::class, 'buyValorant'])->name('buyValorant');
+Route::get('confirm/{id}', [GameController::class, 'show'])->name('confirm');

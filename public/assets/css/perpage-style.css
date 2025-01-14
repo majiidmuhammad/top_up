@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #9a1f40;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    justify-items: center;
+}
+
+.payment-option {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Sembunyikan radio button asli */
+.payment-radio {
+    display: none;
+}
+
+/* Efek saat radio button dipilih */
+.payment-radio:checked + .payment-content {
+    border: 2px solid #007bff; /* Border biru saat dipilih */
+    background-color: #f0f8ff; /* Background biru muda saat dipilih */
+}
+
+/* Hover efek untuk payment option */
+.payment-option:hover {
+    background-color: #f0f0f0;
+    border-color: #9a1f40;
+}
+
+/* Mengatur gambar dalam payment option */
+.payment-option img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* Mengatur teks di bawah gambar */
+.payment-option span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Efek saat card dipilih */
+.payment-option input:checked + .payment-content {
+    background-color: #f0f8ff;
+    border: 2px solid #007bff;
+}
+
+/* Tampilan disabled: abu-abu dan cursor not-allowed */
+.payment-option.disabled {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+.payment-option.disabled:hover {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+/* Mengubah gambar dan teks pada pilihan yang di-disable */
+.payment-option.disabled img {
+    opacity: 0.5;
+}
+
+.payment-option.disabled span {
+    color: #bbb;
+}
+
+.coin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+.coin-card {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.coin-radio {
+    display: none;
+}
+
+.coin-radio:checked + .coin-content {
+    border: 2px solid #007bff;
+    background-color: #f0f8ff;
+}
+
+.coin-card:hover {
+    background-color: #f0f0f0;
+}
+
+.coin-card .coin-content {
+    padding: 15px;
+    display: inline-block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9a1f40;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #7a1a32;
+}
+
+/* konfirmasi.blade */
+
+/* Container Styling */
+.transaction-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Title Styling */
+.transaction-title {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Info Section Styling */
+.transaction-info p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Status Styling */
+.status-unpaid {
+    color: red;
+}
+
+.status-pending {
+    color: orange;
+}
+
+/* QR Code Section */
+.qrcode-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.qrcode-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.qrcode-box {
+    display: inline-block;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.qrcode-box img{
+    max-height: 8rem;
+}
+
+/* Payment Instructions */
+.payment-instructions {
+    margin-bottom: 20px;
+}
+
+.payment-instructions h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.payment-instructions ol {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+/* Back Button */
+.back-button-container {
+    text-align: center;
+}
+
+.back-button {
+    text-decoration: none;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background: #45a049;
+}

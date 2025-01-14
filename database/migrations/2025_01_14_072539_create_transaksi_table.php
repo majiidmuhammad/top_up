@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('telp');
             $table->string('akun_game');
             $table->string('nama_game');
+            $table->string('product');
             $table->integer('harga');
             $table->timestamps();
         });

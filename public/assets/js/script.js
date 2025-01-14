@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const popularGames = [
         { name: "Valorant", link: "/valorant" },
-        { name: "Growtopia", link: "growtopia.html" },
-        { name: "Mobile Legends", link: "mobile-legends.html" },
-        { name: "PUBG", link: "pubg.html" },
-        { name: "Genshin Impact", link: "genshin-impact.html" },
-        { name: "Free Fire", link: "free-fire.html" },
-        { name: "Call of Duty", link: "call-of-duty.html" },
-        { name: "Zepeto", link: "zepeto.html" },
-        { name: "Super Sus", link: "super-sus.html" },
-        { name: "League of Legends", link: "league-of-legends.html" },
-        { name: "AoV", link: "aov.html" },
-        { name: "Undawn", link: "undawn.html" }
+        { name: "Growtopia", link: "" },
+        { name: "Mobile Legends", link: "/mobilelegend" },
+        { name: "PUBG", link: "/pubg" },
+        { name: "Genshin Impact", link: "" },
+        { name: "Free Fire", link: "" },
+        { name: "Call of Duty", link: "" },
+        { name: "Zepeto", link: "" },
+        { name: "Super Sus", link: "" },
+        { name: "League of Legends", link: "" },
+        { name: "AoV", link: "" },
+        { name: "Undawn", link: "" }
     ];
 
     const newGames = [
-        { name: "Honor of Kings", link: "honor-of-kings.html" },
-        { name: "Steam Wallet", link: "steam-wallet.html" },
-        { name: "Dota 2", link: "dota-2.html" },
-        { name: "FC 24", link: "fc24.html" }
+        { name: "Honor of Kings", link: "" },
+        { name: "Steam Wallet", link: "" },
+        { name: "Dota 2", link: "" },
+        { name: "FC 24", link: "" }
     ];
 
     const popularGrid = document.querySelector(".popular-grid");

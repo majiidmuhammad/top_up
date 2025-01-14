@@ -28,5 +28,9 @@ Route::get('pembelian', [PembelianController::class, 'index'])->name('pembelian'
 
 //per game
 Route::get('valorant', [GameController::class, 'valorant'])->name('valorant');
+Route::get('mobilelegend', [GameController::class, 'mobileLegend'])->name('mobile-legend');
+Route::get('pubg', [GameController::class, 'pubg'])->name('pubg');
 Route::post('buy-valorant', [GameController::class, 'buyValorant'])->name('buyValorant');
+Route::post('buy-mobilelegend', [GameController::class, 'buyMobileLegend'])->name('buyMobile-Legend');
+Route::post('buy-pubg', [GameController::class, 'buyPubg'])->name('buyPubg');
 Route::get('confirm/{id}', [GameController::class, 'show'])->name('confirm');
